@@ -23,12 +23,12 @@
 
     /* ===== Design tokens ===== */
     :root {
-      --paper: #fefcf5;        /* background */
-      --ink: #b82f30;          /* body text */
-      --ink-soft: #b82f30;     /* secondary text — TODO: pick a softer tone if desired */
-      --accent: #b82f30;       /* accent — TODO: redefine */
-      --accent-soft: #B89A6B;  /* aged brass */
-      --rule: #D9CDB6;         /* subtle divider */
+      --paper: #fefcf5;
+      --ink: #b82f30;
+      --ink-soft: #b82f30;
+      --accent: #b82f30;
+      --accent-soft: #B89A6B;
+      --rule: #D9CDB6;
     }
 
     * { box-sizing: border-box; }
@@ -45,9 +45,6 @@
     em { font-weight: 500; }
 
     /* ===== Header ===== */
-    /* Header shrinks to leave room for the side panel when it's open,
-       so the language switcher buttons stay visible.
-       Map stays full-width and sits behind the panel. */
     header {
       position: fixed;
       top: 0;
@@ -129,8 +126,6 @@
       from { opacity: 0; }
       to   { opacity: 1; }
     }
-    /* ===== Cascading fade-in: title (400ms) → questions container (1500ms) → spans (1800/2700ms) → rest (3500ms) ===== */
-    /* Lang switcher stays visible from the start. JIA + Map join the CTA at 3500ms. */
     .leaflet-bar,
     .info-btn {
       animation: fadeInSlow 900ms ease-out 3500ms both;
@@ -159,7 +154,6 @@
     }
 
     /* ===== Leaflet controls ===== */
-    /* Zoom sits on the right above the language switcher. Attribution stays bottom-right corner. */
     .leaflet-bottom.leaflet-left {
       bottom: 90px !important;
       right: 25px !important;
@@ -256,7 +250,6 @@
       border-color: var(--paper);
     }
 
-    /* Hide Leaflet's default attribution — credit lives in the .map-credit element. */
     .leaflet-control-attribution { display: none !important; }
 
     /* ===== Info popup buttons (bottom-right) ===== */
@@ -300,7 +293,6 @@
     html[lang="en"] #jiaLink .jia-en,
     html[lang="fr"] #jiaLink .jia-fr,
     html[lang="zh"] #jiaLink .jia-zh { display: block; }
-    /* Prominent CTA below the title */
     .add-cta {
       margin-top: 14px;
       background: var(--ink);
@@ -363,7 +355,6 @@
       padding: 0;
     }
     #mapBtn svg { display: block; }
-    /* Layer options inside the Map popup */
     .layer-option {
       display: block;
       width: 100%;
@@ -435,8 +426,6 @@
       transition: transform 320ms ease, padding-top 600ms ease;
     }
     body.panel-collapsed .about-panel { transform: translateX(-100%); }
-    /* Slot inside the panel that reserves the questions' space from the start —
-       prevents content from shifting when the questions are reparented after the intro. */
     .about-questions-slot {
       min-height: 52px;
       margin: 0 0 18px;
@@ -488,7 +477,6 @@
     }
     .about-panel a:hover { opacity: 0.7; }
 
-    /* Toggle handle: sits on the panel's right edge when open, on the screen's left edge when collapsed */
     .panel-toggle {
       position: fixed;
       top: 50%;
@@ -532,7 +520,6 @@
       background: #E8DFC9;
     }
 
-    /* Customize Leaflet popup to match the aesthetic */
     .leaflet-popup-content-wrapper {
       background: var(--paper);
       border-radius: 2px;
@@ -619,13 +606,11 @@
     .modal button.primary { background: var(--accent); border-color: var(--accent); color: var(--paper); }
     .modal button:hover { opacity: 0.88; }
 
-    /* Wing's Building — thin dotted outline + centered label */
     .wings-building {
       stroke: var(--ink) !important;
       fill: none !important;
     }
 
-    /* Story pin — color depends on the language the story was submitted in */
     .story-pin {
       border: 2px solid var(--paper);
       border-radius: 50%;
@@ -875,7 +860,6 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
         btn.classList.toggle('active', btn.dataset.lang === lang);
       });
 
-      // Wing Noodles exhibition link — point to the language-specific JIA page
       const wingsLinks = {
         en: 'https://jiafoundationmtl.org/wings-strategy/',
         fr: 'https://jiafoundationmtl.org/fr/strategie-wing/',
@@ -893,13 +877,13 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
     const map = L.map('map', {
       center: CHINATOWN_CENTER,
       zoom: 17,
-      minZoom: 15,            // limit zoom
-      maxBounds: [            
+      minZoom: 15,
+      maxBounds: [
         [45.502, -73.568],
         [45.515, -73.553]
       ],
       maxBoundsViscosity: 0.7,
-      zoomControl: false    
+      zoomControl: false
     });
     L.control.zoom({ position: 'bottomleft' }).addTo(map);
 
@@ -916,8 +900,6 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
         }
       );
     }
-    // Thunderforest Atlas — get a free API key at https://www.thunderforest.com/docs/apikeys/
-    // and paste it in place of YOUR_THUNDERFOREST_KEY below.
     const THUNDERFOREST_KEY = 'c796ce9913484e2a9758fbfdf6f20ddf';
     const atlasLayer = L.tileLayer(
       `https://tile.thunderforest.com/atlas/{z}/{x}/{y}{r}.png?apikey=${THUNDERFOREST_KEY}`,
@@ -975,7 +957,6 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
             [-73.60, 45.53],
             [-73.60, 45.48]
           ],
-          //INNER RING MASK MAP
           chinatownCoords
         ]
       }
@@ -984,13 +965,12 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
     L.geoJSON(chinatownMask, {
       style: {
         stroke: false,
-        fillColor: '#fefcf5',     // warm paper color (matches your body bg)
-        fillOpacity: 0.45,        // 55% opaque — adjust to taste (see below)
-        interactive: false        // clicks pass through to the map
+        fillColor: '#fefcf5',
+        fillOpacity: 0.45,
+        interactive: false
       }
     }).addTo(map);
 
-    // Wing's Building outline — bold dotted polygon, stroke color follows the language palette (CSS)
     const wingsBuildingGeoJSON = {
       "type": "FeatureCollection",
       "features": [{
@@ -1014,7 +994,7 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
     };
     L.geoJSON(wingsBuildingGeoJSON, {
       style: {
-        color: '#000',           // placeholder, overridden by .wings-building CSS
+        color: '#000',
         weight: 1.5,
         opacity: 0.9,
         dashArray: '2, 3',
@@ -1025,8 +1005,8 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
     }).addTo(map);
 
     //SUPABASE SETUP
-    const SUPABASE_URL = 'https://uihmujaydqaxzsrelctt.supabase.co';            // e.g. https://abcdefghij.supabase.co
-    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVpaG11amF5ZHFheHpzcmVsY3R0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyOTM1ODcsImV4cCI6MjA5NDg2OTU4N30.wWAb089K3zo4lnSoX1NN-rdoiuw_TJMNyHwdj-BUk9k'; // starts with sb_publishable_ or eyJ
+    const SUPABASE_URL = 'https://uihmujaydqaxzsrelctt.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVpaG11amF5ZHFheHpzcmVsY3R0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyOTM1ODcsImV4cCI6MjA5NDg2OTU4N30.wWAb089K3zo4lnSoX1NN-rdoiuw_TJMNyHwdj-BUk9k';
 
     let db = null;
     const credentialsConfigured =
@@ -1041,10 +1021,9 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
         db = null;
       }
     } else {
-      console.warn('Supabase credentials not configured yet. Showing example pins only.');
+      console.warn('Supabase credentials not configured yet.');
     }
 
-    //  pin styling — color matches the language the story was submitted in (en / fr / zh)
     const storyMarkers = [];
     function makePinIcon(lang) {
       const safeLang = (lang === 'fr' || lang === 'zh') ? lang : 'en';
@@ -1065,10 +1044,7 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
     }
 
     async function loadStories() {
-      if (!db) {
-        exampleStories.forEach(addStoryMarker);
-        return;
-      }
+      if (!db) return;
       const { data, error } = await db
         .from('submissions')
         .select('lat, lng, story, language, created_at')
@@ -1076,7 +1052,6 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
 
       if (error) {
         console.error('Failed to load stories:', error);
-        exampleStories.forEach(addStoryMarker); // fall back so map isn't empty
         return;
       }
       console.log(`Loaded ${data.length} stories from the database.`);
@@ -1089,8 +1064,7 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
       storyMarkers.forEach(m => {
         const item = m._storyData;
         m.setPopupContent(
-          `<div class="popup-story">"${item.story}"</div>
-           <div class="popup-meta">${t('exampleLabel')}</div>`
+          `<div class="popup-story">"${item.story}"</div>`
         );
       });
     }
@@ -1100,7 +1074,6 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
 
     map.on('click', (e) => {
       if (document.body.classList.contains('intro')) return;
-      // (add-mode active)
       if (!document.body.classList.contains('add-mode')) return;
       pendingLatLng = e.latlng;
       document.getElementById('modalBackdrop').classList.add('open');
@@ -1167,7 +1140,7 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
     };
     setTimeout(dismissIntro, 5000);
     document.addEventListener('click', dismissIntro);
-//cos
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { closeModal(); closeAbout(); }
     });
