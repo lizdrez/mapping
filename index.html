@@ -1089,7 +1089,8 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
       storyMarkers.forEach(m => {
         const item = m._storyData;
         m.setPopupContent(
-          `<div class="popup-story">"${item.story}"</div>`
+          `<div class="popup-story">"${item.story}"</div>
+           <div class="popup-meta">${t('exampleLabel')}</div>`
         );
       });
     }
