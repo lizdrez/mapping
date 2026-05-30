@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
-    /* ===== Local fonts ===== */
+   
     @font-face {
       font-family: 'Preztik Demo';
       src: url('PreztikDemoBold.otf') format('opentype');
@@ -21,7 +21,7 @@
       font-display: swap;
     }
 
-    /* ===== Design tokens ===== */
+    
     :root {
       --paper: #fefcf5;
       --ink: #b82f30;
@@ -152,8 +152,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       height: 38px;
     }
-
-    /* ===== Leaflet controls ===== */
     .leaflet-bottom.leaflet-left {
       bottom: 90px !important;
       right: 25px !important;
@@ -181,7 +179,6 @@
       box-shadow: none !important;
     }
 
-    /* ===== Leaflet layer switcher — match site aesthetic ===== */
     .leaflet-control-layers {
       background: rgba(254, 252, 245, 0.92) !important;
       border: 1px solid var(--rule) !important;
@@ -217,7 +214,6 @@
     }
     .leaflet-control-layers-separator { border-top-color: var(--rule) !important; }
 
-    /* ===== Leaflet attribution credit — match site aesthetic ===== */
     .leaflet-control-attribution {
       width: 300px !important;
       background: rgba(254, 252, 245, 0.78) !important;
@@ -252,7 +248,6 @@
 
     .leaflet-control-attribution { display: none !important; }
 
-    /* ===== Info popup buttons (bottom-right) ===== */
     .info-btn {
       position: fixed;
       bottom: 30px;
@@ -409,7 +404,6 @@
     .info-popup a:hover { color: var(--accent); }
 
 
-    /* ===== About side panel — left edge ===== */
     .about-panel {
       position: fixed;
       top: 0;
@@ -513,7 +507,6 @@
       body.panel-collapsed .panel-toggle { left: 0; }
     }
 
-    /* ===== Map fills remaining space ===== */
     #map {
       flex: 1;
       width: 100%;
@@ -536,7 +529,6 @@
     .leaflet-popup-tip { background: var(--paper); }
     .popup-story { font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 16px; }
 
-    /* ===== Submission modal ===== */
     .modal-backdrop {
       position: fixed; inset: 0;
       background: rgba(31, 26, 21, 0.45);
@@ -681,7 +673,6 @@
     <button data-lang="zh">中文</button>
   </div>
 
-  <!-- About side panel -->
   <aside class="about-panel" id="aboutPanel">
     <div class="about-questions-slot" id="questionsSlot"></div>
     <h3 data-i18n="aboutHeading">About</h3>
@@ -724,7 +715,6 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
 
   <div id="map"></div>
 
-  <!-- tool buttons -->
   <a class="info-btn" id="jiaLink" href="https://jiafoundationmtl.org/" target="_blank" rel="noopener" aria-label="JIA Foundation">
     <img src="jia-en.png" alt="JIA Foundation" class="jia-logo jia-en">
     <img src="jia-fr.png" alt="JIA Foundation" class="jia-logo jia-fr">
