@@ -608,9 +608,9 @@
       border-radius: 50%;
       box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     }
-    .story-pin-en { background: #b82f30; }
-    .story-pin-fr { background: #089992; }
-    .story-pin-zh { background: #38b416; }
+    .story-pin-en,
+    .story-pin-fr,
+    .story-pin-zh { background: #ff3f6a; }
 
     html[lang="fr"] {
       --ink: #089992;
@@ -693,7 +693,7 @@
       <section>
         <h3 data-i18n="contextTitle">Context</h3>
         <p data-i18n="contextPara1">In December 2025, the JIA Foundation launched a project to develop a <a href="https://jiafoundationmtl.org/wp-content/uploads/Wings-Conservation-Strategy_Brochure-Oct2025-2.pdf" target="_blank" rel="noopener"><em>Community Vision for Wing's Block</em></a>, aiming to establish this heritage-designated sector of Montréal Chinatown as a much-needed cultural heritage anchor for the neighbourhood. Since then, the Wing's Block Partners Table—bringing together institutions, businesses, property owners, and space activators around the block—was created as a platform to develop and implement this vision, which envisions a future for Wing's Block that showcases Chinatown's cultural heritage and social history, meets the needs of its living community, and actively contributes to its urban revitalization.</p>
-        <p data-i18n="contextPara2" style="margin-top:10px;">As one of the two engagement activities for the exhibition <a id="wingsLink" href="https://jiafoundationmtl.org/wings-strategy/" target="_blank" rel="noopener"><em>Wing Noodles: The Heart of Chinatown</em></a>, this interactive program gathers and amplifies diverse community stories about the past, present, and future of Wing's Block. The initiative aims to document community knowledge about the relational, cultural, and spatial conditions that make this neighbourhood unique. Your contributions will inform and guide the development of the <em>Wing's Block Vision</em>, developed with the Wing's Block Partners Table in collaboration with the JIA Foundation and RaysideLabossière.</p>
+        <p data-i18n="contextPara2" style="margin-top:10px;">As one of the two engagement activities for the exhibition <a id="wingsLink" href="https://jiafoundationmtl.org/wings-strategy/" target="_blank" rel="noopener"><em>Wing Noodles: The Heart of Chinatown</em></a>, this interactive program gathers and amplifies diverse community stories about the past, present, and future of Wing's Block. The initiative aims to document community knowledge about the relational, cultural, and spatial conditions that make this neighbourhood unique. Your contributions will inform and guide the development of the <em>Wing's Block Vision</em>.</p>
       </section>
 
       <section>
@@ -760,13 +760,13 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
       en: {
         title:            "MAKING HOME, MAKING PLACE: Chinatown Digital Storymap",
         aboutQuestions:   "<span class=\"tagline-line slide-in\">What memories do you have?</span><span class=\"tagline-line slide-in\">Which places matter to you?</span>",
-        introBody:        "Chinatown has always been more than a neighbourhood: it was, and continues to be, defined by the social and community life that gives it meaning. <em>Making Home, Making Place: Chinatown Digital Storymap</em> is a collaborative mapping platform by the JIA Foundation that documents the stories, memories, and lived experiences of Montréal Chinatown. From buildings and streets to the spaces in between, each place carries traces of the people who have passed through it. While a physical space may change, these histories endure. By archiving these stories together, we hope to reveal the diverse ways in which how Chinatown has been lived, remembered, and narrated.",
+        introBody:        "Chinatown has always been more than a neighbourhood: it was, and continues to be, defined by the social and community life that gives it meaning. Making Home, Making Place: Chinatown Digital Storymap is a collaborative mapping platform by the JIA Foundation that documents the stories, memories, and lived experiences of Montréal Chinatown. From buildings and streets to the spaces in between, each place carries traces of the people who have passed through it. While a physical space may change, these histories endure. By archiving these stories together, we hope to reveal the diverse ways in which Chinatown has been lived, remembered, and narrated.",
         aboutHeading:     "About",
         usageTitle:       "How to use",
         usageBody:        "Pan and zoom to explore Montréal's Chinatown. Click any pin to read a memory left by someone else. To contribute your own, click the location on the map where your story belongs and a window will open for you to write. Stories will appear after review.",
         contextTitle:     "Context",
         contextPara1:     "In December 2025, the JIA Foundation launched a project to develop a <a href=\"https://jiafoundationmtl.org/wp-content/uploads/Wings-Conservation-Strategy_Brochure-Oct2025-2.pdf\" target=\"_blank\" rel=\"noopener\"><em>Community Vision for Wing's Block</em></a>, aiming to establish this heritage-designated sector of Montréal Chinatown as a much-needed cultural heritage anchor for the neighbourhood. Since then, the Wing's Block Partners Table—bringing together institutions, businesses, property owners, and space activators around the block—was created as a platform to develop and implement this vision, which envisions a future for Wing's Block that showcases Chinatown's cultural heritage and social history, meets the needs of its living community, and actively contributes to its urban revitalization.",
-        contextPara2:     "As one of the two engagement activities for the exhibition <a id=\"wingsLink\" href=\"https://jiafoundationmtl.org/wings-strategy/\" target=\"_blank\" rel=\"noopener\"><em>Wing Noodles: The Heart of Chinatown</em></a>, this interactive program gathers and amplifies diverse community stories about the past, present, and future of Wing's Block. The initiative aims to document community knowledge about the relational, cultural, and spatial conditions that make this neighbourhood unique. Your contributions will inform and guide the development of the <em>Wing's Block Vision</em>, developed with the Wing's Block Partners Table in collaboration with the JIA Foundation and RaysideLabossière.",
+        contextPara2:     "As one of the two engagement activities for the exhibition <a id=\"wingsLink\" href=\"https://jiafoundationmtl.org/wings-strategy/\" target=\"_blank\" rel=\"noopener\"><em>Wing Noodles: The Heart of Chinatown</em></a>, this interactive program gathers and amplifies diverse community stories about the past, present, and future of Wing's Block. The initiative aims to document community knowledge about the relational, cultural, and spatial conditions that make this neighbourhood unique. Your contributions will inform and guide the development of the <em>Wing's Block Vision</em>.",
         landTitle:        "Land acknowledgement",
         landBody:         "The JIA Foundation acknowledges that Montréal’s Chinatown is located on unceded Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodians of the land on which it operates. We also acknowledge that these same colonial legacies continue to displace poor and marginalized people from the land. As Chinatowns have often been a place of belonging for marginalized groups of people, we currently operate from a perspective that aims to facilitate inclusive visions of development which foster growth and revitalization, while combating displacement and gentrification for all, including the unhoused community.",
         consentTitle:     "Consent & privacy",
@@ -785,37 +785,39 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
         layerSatellite:   "Satellite"
       },
       fr: {
-        title:            "Raconter son chez-soi : retracer l'histoire de Chinatown",
-        aboutQuestions:   "<span class=\"tagline-line slide-in\">Quels souvenirs avez-vous ?</span><span class=\"tagline-line slide-in\">Quels sont les lieux qui comptent pour vous ?</span>",
-        introBody:        "Le quartier chinois a toujours été bien plus qu'un simple quartier : il était, et demeure, défini par la vie sociale et communautaire qui lui donne tout son sens. <em>Making Home, Making Place : Chinatown Digital Storymap</em> est une plateforme de cartographie collaborative de la Fondation JIA qui documente les récits, les souvenirs et les expériences vécues dans le quartier chinois de Montréal. Des bâtiments aux rues, en passant par les espaces intermédiaires, chaque lieu porte les traces des personnes qui l'ont fréquenté. Si un espace physique peut changer, ces histoires, elles, perdurent. En rassemblant ces récits, nous espérons révéler la diversité des façons dont le quartier chinois a été vécu, commémoré et raconté.",
+        title:            "Raconter son chez-soi: Carte narrative du Quartier chinois",
+        aboutQuestions:   "<span class=\"tagline-line slide-in\">Quels souvenirs gardez-vous?</span><span class=\"tagline-line slide-in\">Quels lieux comptent pour vous?</span>",
+        introBody:        "Le Quartier chinois a toujours été plus qu'un simple quartier. D’hier à aujourd’hui, se définit la vie sociale et communautaire qui l’anime. « Raconter son histoire: Carte narrative du Quartier chinois » est une plateforme de cartographie collaborative développée par la Fondation JIA qui documente les récits, les souvenirs et les expériences vécues associées aux Quartier chinois de Montréal. Des bâtiments aux rues, en passant par les interstices, chaque lieu porte la trace des personnes qui l'ont fréquenté. Si un espace physique peut changer, ses histoires perdurent. En rassemblant ces récits, nous souhaitons révéler la pluralité des manières de vivre, commémorer et raconter le Quartier chinois.",
         contextTitle:     "Contexte",
         contextPara1:     "En décembre 2025, la Fondation JIA a lancé le projet <a href=\"https://jiafoundationmtl.org/wp-content/uploads/Wings-Conservation-Strategy_Brochure-Oct2025-2.pdf\" target=\"_blank\" rel=\"noopener\"><em>Vision collective pour l'îlot Wings</em></a>, dans le but de transformer ce secteur classé patrimonial en un véritable pôle du patrimoine culturel pour le Quartier chinois. Depuis, la Table des partenaires de l'îlot Wings, rassemblant des institutions, des entreprises, des propriétaires et des groupes culturels et communautaires autour de l'îlot, a été créée pour servir de plateforme à l'élaboration et à la mise en œuvre de cette vision. Celle-ci envisage un avenir pour l'îlot Wings qui met en valeur le patrimoine culturel et l'histoire sociale du Quartier chinois, qui répond aux besoins de sa communauté et qui contribue activement à sa revitalisation urbaine.",
-        contextPara2:     "À travers deux activités participatives organisées dans le cadre de l'exposition <a id=\"wingsLink\" href=\"https://jiafoundationmtl.org/wings-strategy/\" target=\"_blank\" rel=\"noopener\"><em>Nouilles Wing : Le cœur du Quartier chinois</em></a>, ce programme interactif rassemble et met en valeur la pluralité de récits autour du passé, du présent et de l'avenir de l'îlot Wings et du Quartier chinois. L'initiative vise à documenter les connaissances communautaires sur les conditions relationnelles, culturelles et spatiales qui rendent le quartier unique. Vos contributions éclaireront et guideront l'élaboration de la <em>Vision collective pour l'îlot Wings</em>.",
+        contextPara2:     "Cette activité interactive, faisant partie d'un programme participatif organisé dans le cadre de l'exposition <a id=\"wingsLink\" href=\"https://jiafoundationmtl.org/wings-strategy/\" target=\"_blank\" rel=\"noopener\"><em>Nouilles Wing : Le cœur du Quartier chinois</em></a>, rassemble et met en valeur la pluralité de récits autour du passé, du présent et de l'avenir de l'îlot Wings et du Quartier chinois. L'initiative vise à documenter les connaissances communautaires sur les conditions relationnelles, culturelles et spatiales qui rendent le quartier unique. Vos contributions éclaireront et guideront l'élaboration de la <em>Vision collective pour l'îlot Wings</em>.",
         aboutHeading:     "À propos",
         landTitle:        "Reconnaissance territoriale",
         landBody:         "La Fondation JIA reconnaît que le Quartier chinois de Montréal est situé sur un territoire autochtone non cédé et que la nation Kanien'kehà:ka est la gardienne des terres sur lesquelles nous opérons. Nous reconnaissons également que des systèmes coloniaux continuent de déplacer des personnes pauvres et marginalisées. Comme les quartiers chinois ont souvent été des lieux d'appartenance pour des personnes appartenant à des groupes marginalisés, notre travail actuel vise à faciliter des visions inclusives du développement, qui situent la croissance et la revitalisation côte-à-côte avec la lutte contre le déplacement et la gentrification, et ce, au profit de tous·tes, y compris les personnes en situation d’itinérance.",
         usageTitle:       "Comment utiliser cette carte",
-        usageBody:        "Faites défiler et zoomez pour explorer Chinatown à Montréal. Cliquez sur n'importe quelle épingle pour lire un souvenir laissé par quelqu'un d'autre. Pour partager votre propre histoire, cliquez sur la carte à l'endroit qui s'y rapporte, et une fenêtre s'ouvrira pour vous permettre d'écrire. Les histoires apparaîtront après examen.",
+        usageBody:        "Faites défiler et zoomez pour explorer le Quartier chinois de Montréal. Cliquez sur n'importe quelle épingle pour lire le souvenir de quelqu'un d'autre. Pour partager votre propre souvenir, cliquez sur la carte à l'endroit qui s'y rapporte, et rédigez votre texte dans la fenêtre qui s'ouvrira. Les histoires apparaîtront après modération.",
         consentTitle:     "Consentement et confidentialité",
-        consentBody:      "En soumettant une histoire, vous acceptez qu'elle soit affichée publiquement sur cette carte. Veuillez ne pas inclure de noms complets, d'adresses ou d'autres détails permettant d'identifier d'autres personnes sans leur permission.",
+        consentBody:      "En soumettant un souvenir, vous acceptez qu'il soit affiché publiquement sur cette carte. Veuillez ne pas inclure de noms complets, d'adresses ou d'autres détails permettant d'identifier d'autres personnes sans leur permission.",
         moderationTitle:  "Modération",
         moderationBody:   "Toutes les soumissions sont examinées avant d'être publiées. Tout contenu haineux, discriminatoire ou autrement inapproprié sera signalé et supprimé.",
-        shareTitle:       "Partager une histoire",
-        shareHint:        "Parlez-nous de ce lieu. Votre histoire sera examinée avant d'apparaître sur la carte.",
-        sharePlaceholder: "Que s'est-il passé ici ? Que renferme ce lieu ?",
+        shareTitle:       "Partager un souvenir",
+        shareHint:        "Parlez-nous de ce lieu. Votre souvenir sera examiné avant d'apparaître sur la carte.",
+        sharePlaceholder: "Que s'est-il passé ici? Que renferme ce lieu?",
         cancel:           "Annuler",
         submit:           "Soumettre",
-        submitThankYou:   "Merci. Votre histoire a été soumise pour examen.",
-        addStoryHint:     "Cliquez n'importe où sur la carte pour déposer votre histoire.",
-        addCtaLabel:      "+ Ajouter une histoire",
+        submitThankYou:   "Merci. Votre souvenir a été soumis pour modération.",
+        addStoryHint:     "Cliquez n'importe où sur la carte pour situer votre souvenir.",
+        addCtaLabel:      "+ Ajouter un souvenir",
         layerAtlas:       "Atlas",
         layerSatellite:   "Satellite"
       },
       zh: {
-        title:            "打造家園，營造空間：繪製唐人街的故事地圖",
+        title:            "打造家園，營造空間：繪製唐人街的數位故事地圖",
         aboutQuestions:   "<span class=\"tagline-line slide-in\">你有哪些回忆？</span><span class=\"tagline-line slide-in\">哪些地方对你来说比较重要？</span>",
-        introBody:        "唐人街一直以来都不仅仅是一个街区：它过去是，现在仍然是由赋予其意义的社会和社区生活所定义的。“营造家园，营造场所：唐人街数字故事地图”是由JIA基金会创建的协作地图平台，旨在记录蒙特利尔唐人街的故事、记忆和生活体验。从建筑、街道到其间的空地，每个地方都承载着曾在此生活过的人们的痕迹。尽管物理空间会发生变化，但这些历史却会永存。通过将这些故事汇集在一起，我们希望展现唐人街生活、记忆和叙述的多元方式。",
+        introBody:        "唐人街向來都不僅僅是一個街區：它過去如此，現在依然如此, 其定義源自賦予它意義的社會與社區生活。「打造家園，營造空間：繪製唐人街的數位故事地圖 」是由家基金會創建的協作式地圖平台，旨在記錄蒙特婁唐人街的故事、記憶和生活體驗。從建築與街道到其間的空隙，每個地方都承載著曾經在此生活過的人們的痕跡。儘管實體空間可能隨時間更迭，但這些歷史卻歷久彌新。透過共同歸檔這些故事，我們希望展現唐人街在人們心中被生活、被銘記與被敘述的多樣面貌。",
         contextTitle:     "语境",
+        contextPara1:     "2025年12月，家基金會啟動了一項計畫，旨在為永興隆街區制定<a href=\"https://jiafoundationmtl.org/wp-content/uploads/Wings-Conservation-Strategy_Brochure-Oct2025-2.pdf\" target=\"_blank\" rel=\"noopener\"><em>社區願景</em></a>，目標是將滿地可唐人街這片獲列為文化遺產的區域，打造成為該社區需要的文化核心。自此，匯聚了該街區周邊的機構、商家、業主及空間活化者的「永興隆街區夥伴合作平台」應運而生，作為制定並落實此願景的基地。該願景描繪了永興隆街區的未來藍圖：既展現唐人街的文化遺產與社會歷史，亦滿足當地居民的需求，並積極推動都市再生。",
+        contextPara2:     "作為<a id=\"wingsLink\" href=\"https://jiafoundationmtl.org/wings-strategy/\" target=\"_blank\" rel=\"noopener\"><em>「永興隆麵廠：唐人街的中心」</em></a>展覽的一部分，這項互動計畫透過兩種參與活動，集中並放大社區中關於「永興隆街區」及唐人街過去、現在與未來的多元故事。此計畫旨在記錄社區對這個街區獨具特色的關係、文化及空間條件的認知。您的意見及參與將為「永興隆街區願景」的制定提供重要參考與指引。",
         aboutHeading:     "關於",
         landTitle:        "土地認同",
         landBody:         "家基金會認同蒙特利爾唐人街位於原住民領土上，並承認Kanien’kehá:ka民族是這塊土地的保護及管理者。我們也認同殖民主義的影響及後果繼續迫使貧窮和被邊緣化的人們遷離這片土地。由於唐人街一直是邊緣化群體的歸屬地, 家基金會的價值觀及運作方法以包容性的發展願景來促進成長和振興, 打擊導致人口流離失所和社區仕紳化的根本原因, 同時為所有人爭取一個共融的未來，包括無住房的人口",
@@ -878,7 +880,7 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
 
     const map = L.map('map', {
       center: CHINATOWN_CENTER,
-      zoom: 17,
+      zoom: 16,
       minZoom: 15,
       maxBounds: [
         [45.502, -73.568],
@@ -953,11 +955,11 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
         "type": "Polygon",
         "coordinates": [
           [
-            [-73.60, 45.48],
-            [-73.54, 45.48],
-            [-73.54, 45.53],
-            [-73.60, 45.53],
-            [-73.60, 45.48]
+            [-180, -85],
+            [180, -85],
+            [180, 85],
+            [-180, 85],
+            [-180, -85]
           ],
           chinatownCoords
         ]
