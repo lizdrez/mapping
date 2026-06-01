@@ -502,10 +502,7 @@
       transform: rotate(180deg);
     }
     body.panel-collapsed .panel-toggle .chevron { transform: rotate(0); }
-    @media (max-width: 420px) {
-      .panel-toggle { left: 90vw; }
-      body.panel-collapsed .panel-toggle { left: 0; }
-    }
+    /* Mobile responsive overrides live in one block near the end of this stylesheet. */
 
     #map {
       flex: 1;
@@ -659,6 +656,30 @@
     html[lang="zh"] .popup-story {
       font-family: 'Barlow', 'Songti SC', 'STSong', '宋体', SimSun, serif !important;
       font-weight: 300 !important;
+    }
+    @media (max-width: 640px) and (pointer: coarse) {
+      header { left: 0; padding: 14px 16px 10px; }
+      header h1 { font-size: 19px; line-height: 1.2; text-align: center; }
+      .add-cta { margin-top: 10px; padding: 8px 18px; }
+
+      body.intro .about-questions { opacity: 0 !important; animation: none !important; }
+
+      .about-panel { width: 86vw; max-width: 380px; padding: 22px 20px 28px; }
+
+      .panel-toggle { left: 86vw; width: 30px; height: 66px; }
+      body.panel-collapsed .panel-toggle { left: 0; }
+
+      .info-btn { bottom: 22px; }
+      #jiaLink { right: 16px; }
+      #mapBtn { right: 60px; }
+      .lang-switcher { bottom: 22px; right: 104px; height: 36px; }
+      .leaflet-bottom.leaflet-left { bottom: 70px !important; right: 16px !important; }
+      .map-credit { font-size: 8px; max-width: 60vw; }
+
+      .info-popup { width: min(280px, calc(100vw - 32px)); right: 16px; }
+      #mapPopup { right: 60px; }
+      .modal { padding: 22px 18px; }
+      .modal h2 { font-size: 23px; }
     }
   </style>
 </head>
@@ -1142,8 +1163,21 @@ Indigenous territory, and recognizes the Kanien’kehà:ka Nation as the custodi
         }
       }, 800);
     };
-    setTimeout(dismissIntro, 5000);
-    document.addEventListener('click', dismissIntro);
+    const IS_MOBILE = window.matchMedia('(max-width: 640px) and (pointer: coarse)').matches;
+    if (IS_MOBILE) {
+      // mobile
+      document.body.classList.remove('intro');
+      const questions = document.querySelector('.about-questions');
+      const slot = document.getElementById('questionsSlot');
+      if (questions && slot && !slot.contains(questions)) {
+        slot.appendChild(questions);
+        questions.classList.add('in-panel');
+        document.body.classList.add('intro-done');
+      }
+    } else {
+      setTimeout(dismissIntro, 5000);
+      document.addEventListener('click', dismissIntro);
+    }
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { closeModal(); closeAbout(); }
